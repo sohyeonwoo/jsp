@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+			
+		<title></title>
+		<script>
+			$(function(){
+				$("#sBtn").click(function(){
+					if($("#no").val().length < 2){
+						alert("학번은 3글자 이상을 넣어야합니다.")
+						$("#no").focus();
+						return fales;
+					}
+					frn.submit();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h1>인생은 성적순 성적입력 후 진로 선택</h1>
+		<form name="frn" method="get" action=" http://localhost:8181/jsp1031/S02">
+			<label>학번</label>
+		<input type="text" name="no" id="no">
+		<br>
+		<label>이름</label>
+		<input type="text" name="name" id="name">
+		<br>
+		<label>국어점수</label>
+		<input type="text" name="kor" id="kor">
+		<br>
+		<label>영어점수</label>
+		<input type="text" name="eng" id="eng">
+		<br>
+		<label>수학점수</label>
+		<input type="text" name="math" id="math">
+		<br>
+		<label>계열선택</label>
+		<!-- radio 둘 중 하나선택-->
+		<input type="radio" name="major" id="humanit" value="humanit">
+		<label for="humanit">문과</label>
+		<input type="radio" name="major" id="science" value="science">
+		<label for="science">이과</label>
+		<br>
+		<label>좋아하는 과목</label>
+		<!-- checkbox로 다중선택 -->
+		<input type="checkbox" name="subjeck" id="kor1" value="kor">
+		<label for="kor">국어</label>
+		<input type="checkbox" name="subjeck" id="eng1" value="eng">
+		<label for="eng">영어</label>
+		<input type="checkbox" name="subjeck" id="math1" value="math">
+		<label for="math">수학</label>
+		<input type="checkbox" name="subjeck" id="science" value="science">
+		<label for="science">과학</label>
+		<input type="checkbox" name="subjeck" id="history" value="history">
+		<label for="history">역사</label>
+		<!--select사용 해서 주소선택하기-->
+		<br>
+		<labele>주소선택</labele>
+		<select name="address" id="address">
+		<option value="seoul">서울</option>
+		<option value="incheon">인천</option>
+		<option value="busan">부산</option>
+		<option value="daejeon">대전</option>
+		<option value="daegu">대구</option>
+		</select>
+		<br>
+		<input type="button" id="sBtn" onclick="Btn()" value="확인">
+		<input type="reset" value="취소">
+		</form>
+		
+	
+	</body>
+</html>
