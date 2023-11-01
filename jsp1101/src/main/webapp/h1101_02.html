@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<style>
+			button{width: 100px; height: 20px;}
+			
+		</style>
+	<script>
+    $(function () {
+        $("#fbtn").click(function () {
+            var iidInput = $("input:text[name=name]");
+            var iidValue = iidInput.val();
+            if (iidValue.length < 3) {
+                alert("아이디는 3글자 이상 입력해야 합니다.");
+                iidInput.focus();
+                return false;
+            }
+        });
+    });
+</script>
+	</head>
+	<body>
+		<h1>회원가입</h1>
+		<form name="frm" method="get" action="S01">
+			<label>아이디</label>
+			<input type="text" name="id" id="iid"> <br>
+			<label>패스워드</label>
+			<input type="text" name="password" id="pww"><br>
+			<label>이름</label>
+			<input type="text" name="name" id="name"><br>
+			
+			<label>성별</label>
+			<input type="radio" name="gender" id="male" value="male">
+			<label for="male">남자</label>
+			<input type="radio" name="gender" id="female" value="female">
+			<label for="female">여자</label> <br>
+			
+			<label>취미</label>
+			<input type="checkbox" name="hobby" id="game" value="game">
+			<label for="game">game</label>
+			<input type="checkbox" name="hobby" id="swim" value="swim">
+			<label for="swim">swim</label>
+			<input type="checkbox" name="hobby" id="run" value="run">
+			<label for="run">run</label>
+			<input type="checkbox" name="hobby" id="book" value="book">
+			<label for="book">book</label>
+			<input type="checkbox" name="hobby" id="cook" value="cook">
+			<label for="cook">cook</label>
+			<br>
+			<label>address</label>
+			<select name="address">
+				<option value="서울">서울</option>
+				<option value="경기">경기</option>
+				<option value="부산">부산</option>
+				<option value="대전">대전</option>
+			</select>
+			<br>
+			<input type="button" id="fbtn" value="확인">
+			<input type="reset"  value="취소">
+			
+			
+		</form>
+	
+	</body>
+</html>
