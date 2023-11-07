@@ -8,17 +8,13 @@
   <title>Pages - Login</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  
-   <style>
- 
-  </style><link rel="stylesheet" href="css/write.css">
+  <link rel="stylesheet" href="css/write.css">
 </head>
 
 <body>
-<!-- top 부분 시작 -->
- <%@include file="top.jsp"%>
-<!-- top 부분 끝 -->
-
+<!-- top 시작 -->
+<%@include file="top.jsp" %>
+<!-- top 끝 -->
   <section>
     <h1>관리자 글쓰기</h1>
     <hr>
@@ -68,8 +64,8 @@
 
   </section>
 
- <!-- footer 시작 -->
-  <%@include file = "footer.jsp" %>
-  <!-- footer 끝 -->
+<!-- footer 시작 -->
+<%@include file="footer.jsp" %>
+<!-- footer 끝 -->
 </body>
 </html>

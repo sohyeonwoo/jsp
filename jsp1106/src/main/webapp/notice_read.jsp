@@ -10,14 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/read.css">
-
 </head>
 
-
 <body>
-  <!-- top 부분 시작 -->
- <%@include file="top.jsp"%>
-<!-- top 부분 끝 -->
+<!-- top 시작 -->
+<%@include file="top.jsp" %>
+<!-- top 끝 --> 
   <section>
     <h1>NOTICE</h1>
 
@@ -44,9 +42,9 @@
     <div class="list">삭제</div>
     <div class="list">수정</div>
   </section>
-
- <!-- footer 시작 -->
-  <%@include file = "footer.jsp" %>
-  <!-- footer 끝 -->
+<!-- footer 시작 -->
+<%@include file="footer.jsp" %>
+<!-- footer 끝 -->
+ 
 </body>
 </html>

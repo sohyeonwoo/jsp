@@ -12,15 +12,13 @@
 	 	<header id="wrap">
 	 		<div id="nav_up">
 	 			<ul>
-	 			<%if(session.getAttribute("session_id")==null){%>
+	 			    <%if(session.getAttribute("session_id")==null){ %>
 	 				<li>회원가입</li>
-	 				<li><a href = "clogin.jsp">로그인</a></li>
+	 				<li><a href="cLogin.jsp">로그인</a></li>
 	 				<%}else{ %>
-	 				<li><%=session.getAttribute("session_nicName") %>어벤져스님</li>
-	 				<li><a href = "clogin.jsp">로그아웃</a></li>
+	 				<li><%=session.getAttribute("session_nicName") %>님</li>
+	 				<li><a href="cLogout.jsp">로그아웃</a></li>
 	 				<%} %>
-	 				
-	 				
 	 				<li>고객행복센터</li>
 	 				<li>배송정보검색</li>
 	 				<li>기프트카드 등록</li>
@@ -42,7 +40,7 @@
 	 		
 	 		</nav>
 	 	</header>
-	 	<section>
+	 	<section >
 	 		<div id="top_img">
 	 			<div>
 	 				<a href="#">

@@ -12,16 +12,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/notice_list.css">
-  <style>
-  #wrap a{text-decoration: none; color: white; font-size: 13px;}
-  a{ text-decoration: none; color: black; }
-  </style>
 </head>
 <body>
-<!-- top 부분 시작 -->
- <%@include file="top.jsp"%>
-<!-- top 부분 끝 -->
-
+<!-- top 시작 -->
+<%@include file="top.jsp" %>
+<!-- top 끝 -->
   <section>
     <h1>NOTICE</h1>
     <div class="wrapper">
@@ -51,41 +46,43 @@
         <th>제목</th>
         <th>작성일</th>
       </tr>
-      <!--게시글 반복 시작-->
-     <%for(int i=1;i<=10;i++){ 
-     Date today = new Date();
-     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    		 String today_str = sdf.format(today);
-     %> 
-     
-      
+      <!-- 게시글반복 시작 -->
+      <% for(int i=1;i<=10;i++){ 
+         Date today = new Date();
+         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         String today_str = sdf.format(today);
+      %>
       <tr>
         <td><%=i %></td>
-        <td class="table-title"><a href="notice_read.jsp">카카오플러스 친구 오픈</a></td>
-        <td><%=today_str%></td>
+        <td class="table-title">
+           <a href="notice_read.jsp">카카오플러스 친구 오픈</a>
+        </td>
+        <td><%=today_str %></td>
       </tr>
       <%} %>
-      <!--게시글 반복 end-->
+      <!-- 게시글반복 끝 -->
+      
     </table>
 
     <ul class="page-num">
       <li class="first"></li>
       <li class="prev"></li>
-      <!--page 반복 시작-->
-      <%for(int i=1;i<=10;i++){%>
+      <!-- 페이지 반복 시작 -->
+      <% for(int i=1;i<=10;i++){ %>
       <li class="num">
-        <div><%=i%></div>
+        <div><%=i %></div>
       </li>
-    <%} %>  
-      <!--page 반복 end-->
+      <%} %>
+      <!-- 페이지 반복 끝 -->
+      
       <li class="next"></li>
       <li class="last"></li>
     </ul>
 
-    <a href="notice_write.jsp"><div class="write">쓰기</a></div>
+    <a href="notice_write.jsp"><div class="write">쓰기</div></a>
   </section>
 <!-- footer 시작 -->
-  <%@include file = "footer.jsp" %>
-  <!-- footer 끝 -->
+<%@include file="footer.jsp" %>
+<!-- footer 끝 -->
 </body>
 </html>

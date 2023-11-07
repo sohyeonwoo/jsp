@@ -3,10 +3,10 @@
  <header id="wrap">
     <ul>
       <li><a href="join01_terms.jsp">회원가입</a></li> <span>|</span>
-      <li><a href="clogin.jsp">로그인</a></li> <span>|</span>
+      <li><a href="cLogin.jsp">로그인</a></li> <span>|</span>
       <li><a href="notice_list.jsp">고객행복센터</a></li> <span>|</span>
-      <li><a href="">배송지역검색</a></li> <span>|</span>
-      <li><a href="">기프트카드 등록</a></li>
+      <li>배송지역검색</li> <span>|</span>
+      <li>기프트카드 등록</li>
     </ul>
   </header>
 
@@ -28,7 +28,7 @@
         <li>COOKIT소개</li>
         <li>COOKIT 메뉴</li>
         <li>리뷰</li>
-        <a href="event_list.jsp"> <li>이벤트</li></a>
+        <a href="event_list.jsp"><li>이벤트</li></a>
         <li>MY쿡킷</li>
       </ul>  
     </div>

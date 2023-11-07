@@ -12,7 +12,9 @@
 </head>
 
 <body>
- <%@include file="top.jsp" %>
+<!-- top 시작 -->
+<%@include file="top.jsp" %>
+<!-- top 끝 -->
 
   <section>
     <h1>로그인</h1>
@@ -24,7 +26,7 @@
       </ul>  
     </article>
 
-    <form action="doclogin" name="login" method="post">
+    <form action="doCLogin.jsp" name="login" method="post">
       <div class="id">
         <input type="text" name="id" size="30" placeholder="CJ ONE 통합아이디 6~20자">
       </div>
@@ -57,7 +59,8 @@
       <div class="sign-up">CJ ONE 통합회원 신규가입하기 <div class="arrow">&emsp;</div></div>
     </div>
   </section>
-	<%@include file="footer.jsp" %>
- 
+<!-- footer 시작 -->
+<%@include file="footer.jsp" %>
+<!-- footer 끝 -->
 </body>
 </html>
