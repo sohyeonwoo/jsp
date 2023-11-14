@@ -119,7 +119,7 @@ public class BoardDao {
 			} catch (Exception e2) {e2.printStackTrace();}
 		}
 		return bdto;
-	}
+	}//
 
 	public Connection getConnection() {
 		Connection connection = null;

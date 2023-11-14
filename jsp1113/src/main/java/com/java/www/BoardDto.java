@@ -25,7 +25,6 @@ public class BoardDto {
 
 
 	public BoardDto(String btitle, String bcontent, String id, String bfile) {
-		super();
 		this.btitle = btitle;
 		this.bcontent = bcontent;
 		this.id = id;

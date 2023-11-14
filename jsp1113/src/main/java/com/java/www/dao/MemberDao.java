@@ -9,7 +9,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.java.www.Dto.MemberDto;
+import com.java.www.dto.MemberDto;
 
 public class MemberDao {
 	
