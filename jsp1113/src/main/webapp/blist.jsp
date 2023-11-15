@@ -1,5 +1,5 @@
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.java.www.BoardDto"%>
+<%@page import="com.java.www.controller.BoardDto"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.java.www.dao.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

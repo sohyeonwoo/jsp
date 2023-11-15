@@ -17,32 +17,34 @@ import javax.servlet.http.HttpServletResponse;
     
 
 	
-	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doAction");
-		request.setCharacterEncoding("utf-8");
-		//링크로 연결된 filename 알아내기
-		String uri = request.getRequestURI();
-		String upath = request.getContextPath();
-		String fileName = uri.substring(upath.length());
-		System.out.println("클릭한 파일주소 : " + fileName);
-		String url ="";
-		
-		if(fileName.equals("/login.do")) {
-			 url = "login.jsp";
-		}else if(fileName.equals("/write.do")) {
-			 url = "write.jsp";
-		}else if(fileName.equals("/mwrite.do")) {
-			 url = "mwrite.jsp";
-		}else if(fileName.equals("/doLogin.do")) {
-			 url = "Do_login";
-		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-		dispatcher.forward(request, response);
+protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	System.out.println("doAction");
+	request.setCharacterEncoding("utf-8");
+	//링크로 연결된 filename 알아내기
+	String uri = request.getRequestURI();
+	String upath = request.getContextPath();
+	String fileName = uri.substring(upath.length());
+	System.out.println("클릭한 파일주소 : " + fileName);
+	String url ="";
+	
+	if(fileName.equals("/login.do")) {
+		 url = "login.jsp";
+	}else if(fileName.equals("/write.do")) {
+		 url = "write.jsp";
+	}else if(fileName.equals("/mwrite.do")) {
+		 url = "mwrite.jsp";
+	}else if(fileName.equals("/doLogin.do")) {
+		 url = "Do_login";
+	}
+	RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+	dispatcher.forward(request, response);
 		
 		//page  호출
 		//response.sendRedirect(fileName);
 		
 	}
+
+
 		
 		
 	

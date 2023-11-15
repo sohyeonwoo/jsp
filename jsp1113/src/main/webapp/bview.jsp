@@ -1,5 +1,5 @@
 <%@page import="com.java.www.dao.BoardDao"%>
-<%@page import="com.java.www.BoardDto"%>
+<%@page import="com.java.www.controller.BoardDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
