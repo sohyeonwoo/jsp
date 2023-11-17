@@ -24,7 +24,7 @@ public class MemberDao {
 	public MemberDto doLogin(String id2, String pw2) {
 		try {
 			conn = getConnection();
-			query="select * from member id=? and pw=?";
+			query="select * from member where id=? and pw=?";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1,id2);
 			pstmt.setString(2,pw2);
@@ -65,7 +65,7 @@ public class MemberDao {
 		Connection connection = null;
 		try {
 			Context context = new InitialContext();
-			DataSource ds = (DataSource)context.lookup("java:comp/enx/jdbc/Oracle18");
+			DataSource ds = (DataSource)context.lookup("java:comp/env/jdbc/Oracle18");
 			connection = ds.getConnection();
 			
 			
