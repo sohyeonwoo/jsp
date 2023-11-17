@@ -36,7 +36,7 @@ public class doBUpdateService implements Service {
 			 System.out.println("두비업데이트서비스 올드비파일: "+oldBfile);
 			
 			//파일이름
-			Enumeration<> files = multi.getFileNames();
+			Enumeration files = multi.getFileNames();
 			//
 			if(files.hasMoreElements()) {
 					
