@@ -11,7 +11,7 @@
 		<c:if test="${session_id==null }">
 		<h1>login please</h1>
 		<ul>
-		<li><a href="Login.do">login</a></li>
+		<li><a href="login.do">login</a></li>
 		<li><a href="memInsert.do">join membership</a></li>
 		</ul>
 		</c:if>
