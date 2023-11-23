@@ -17,24 +17,13 @@
 			button{width: 200px; height: 60px; margin-top: 30px;}
 		</style>
 		<script>
-		$(function(){
-			$("#fbtn").click(function(){
-				if($("#id").val().length<2){
-					alert("아이디 입력 요망.");
-					$("#id").focus();
-					return false;
-				}
-				alert("저장한다");
-				m_frm.submit();
-				
-			})
-		})
+	
 		</script>
 	</head>
 	<body>
 		<div>
 			<h1>join membership</h1>
-			<form name="m_frm" method="post" action="Do_mwrite">
+			<form name="m_frm" method="post" action="doMmwrite.do">
 				<table>
 					<tr>
 						<th>id</th>

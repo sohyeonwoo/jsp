@@ -19,18 +19,13 @@
 			button{width: 200px; height: 60px; margin-top: 30px;}
 		</style>
 		<script>
-			$(function(){
-				$("#fbtn").click(function(){
-					alert("파일을 첨부");
-					b_frm.submit();
-				})
-			})
+		
 		</script>
 	</head>
 	<body>
 		<div>
 			<h1>write</h1>
-			<form name="b_frm" method="post" action="Do_bwrite" enctype="multipart/form-data">
+			<form name="b_frm" method="post" action="doWrite.do" enctype="multipart/form-data">
 				<table>
 				<colgroup>
 				<col width="20%">
@@ -41,8 +36,8 @@
 					</tr>
 					<tr>
 						<th>id</th>
-						<td><%=session.getAttribute("session_id") %></td>
-						<input type="hidden" name="id" value="<%=session.getAttribute("session_id") %>">
+						<td></td>
+						<input type="hidden" name="id" value="">
 					
 					</tr>
 					<tr>
@@ -52,14 +47,6 @@
 					<tr>
 						<th>File Attachment</th>
 						<td><input type="file" name="bfile" id=""bfile""></td>
-					</tr>
-					<tr>
-						<th>File Attachment</th>
-						<td><input type="file" name="bfile1" id=""bfile1""></td>
-					</tr>
-					<tr>
-						<th>File Attachment</th>
-						<td><input type="file" name="bfile2" id=""bfile2""></td>
 					</tr>
 					
 				</table>

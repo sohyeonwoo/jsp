@@ -16,19 +16,19 @@
 		button{width: 150px; height: 40px; margin-top: 30px;}
 	</style>
 	<script>
-		$(function(){
-			$("#fbtn").click(function(){
-				l_frm.submit();
-			});
+	$(function(){
+		$("#fbtn").click(function(){
+			frm.submit();
 		});
-			
-		
+	});
+	
 	</script>
+
 	</head>
 	<body>
 	<div>
 	<h1>login</h1>
-	<form name="l_frm" method="post" action="dologin.do">
+	<form name="frm" method="post" action="dologin.do">
 	<table>
 	<tr>
 	<th>id</th>
@@ -40,7 +40,7 @@
 	</tr>
 	</table>
 	<button type = "button" id="fbtn">login</button>
-	<a href="index.jsp"><button type = "button" >back page</button></a>
+	<a href="index.do"><button type = "button" >back page</button></a>
 	</form>
 	
 	</div>

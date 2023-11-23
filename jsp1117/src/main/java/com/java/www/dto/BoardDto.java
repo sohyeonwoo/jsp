@@ -31,6 +31,17 @@ public class BoardDto {
 	}
 
 
+	public BoardDto(String btitle, String bcontent, String id, int bgroup, int bstep, int bindent, String bfile) {
+		this.btitle = btitle;
+		this.bcontent = bcontent;
+		this.id = id;
+		this.bgroup = bgroup;
+		this.bstep = bstep;
+		this.bindent = bindent;
+		this.bfile = bfile;
+	}
+
+
 	public BoardDto(String btitle, String bcontent, String id, String bfile) {
 		this.btitle = btitle;
 		this.bcontent = bcontent;

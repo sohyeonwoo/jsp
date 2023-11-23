@@ -259,4 +259,83 @@ public class BoardDao {
 		} //
 		return listCount;
 	}// listCount
+	
+	public void bHitUp(int bno2) {
+		try {
+			conn = getConnection();
+			query = "update board set bhit = bhit+1 where bno=?";
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1,bno2);
+			result = pstmt.executeUpdate();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		} //
+	}
+	
+	//답글달기 - insert
+	public int bReply(BoardDto bdto2) {
+		try {
+			System.out.println("dao bgroup"+bdto2.getBgroup());
+			conn = getConnection();
+			query="insert into board values (board_seq.nextval,?,?,sysdate,?,?,?,?,1,?)";
+			pstmt=conn.prepareStatement(query);
+			//1,2
+			pstmt.setString(1,bdto2.getBtitle());
+			pstmt.setString(2,bdto2.getBcontent());
+			pstmt.setString(3,bdto2.getId());
+			pstmt.setInt(4,bdto2.getBgroup());
+			pstmt.setInt(5,bdto2.getBstep()+1);
+			pstmt.setInt(6,bdto2.getBindent()+1);
+			pstmt.setString(7,bdto2.getBfile());
+			
+			result = pstmt.executeUpdate();
+			System.out.println("dao result"+result);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return result;
+	}
+	
+	//bstep 1증가 - update
+	public void bstepUp(int bgroup2, int bstep2) {
+		try {
+			
+			conn = getConnection();
+			query="update board set bstep = bstep+1 where bgroup=? and bstep>?";
+			pstmt = conn.prepareStatement(query);
+			//1,2
+			pstmt.setInt(1,bgroup2);
+			pstmt.setInt(2,bstep2);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
 }// CLASS(BoardDao-1117)

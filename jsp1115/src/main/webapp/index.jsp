@@ -8,16 +8,15 @@
 		<title>main page</title>
 	</head>
 	<body>
-	<c:if test="${session_id==null }">
+		<c:if test="${session_id ==null }">
 		<h1>login please</h1>
 		<ul>
 		<li><a href="login.do">login</a></li>
-		<li><a href="writer.do">join membership</a></li>
+		<li><a href="mwriter.do">join membership</a></li>
 		</ul>
 		</c:if>
-		
-		<c:if test="${session_id !=null}">
-		<h1>Welcome aboard</h1>
+		<c:if test="${ session_id !=null}">
+		<h1> ${session_id} 님 Welcome aboard.</h1>
 		<ul>
 		<li><a href="list.do">게시판</a></li>
 		<li><a href="logout.do">logout</a></li>

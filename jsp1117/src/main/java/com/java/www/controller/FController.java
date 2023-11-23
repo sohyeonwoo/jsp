@@ -9,14 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import com.java.www.service.MDoLoginService;
 import com.java.www.service.Service;
 import com.java.www.service.bDeleteService;
+import com.java.www.service.bReplyService;
 import com.java.www.service.BListService;
 import com.java.www.service.BSelectOneService;
 import com.java.www.service.BUpdateService;
+import com.java.www.service.DoBReplyService;
 @WebServlet("*.do")
 public class FController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("FCtrl doAction");
 		request.setCharacterEncoding("UTF-8");
 		
 		//파일이름 찾기
@@ -78,6 +79,23 @@ public class FController extends HttpServlet {
 				System.out.println(" bno : " + request.getParameter("bno"));
 				System.out.println("컨트롤러 : bDelete.jsp호출"); //확인
 				url="bDelete.jsp";
+				break;
+			
+			case "/bReply.do": //6. 답글달기 - select
+				service = new bReplyService();
+				service.execute(request, response);
+				//확인용
+				System.out.println(" bno : " + request.getParameter("bno"));
+				System.out.println("컨트롤러 : bReply.jsp호출"); //확인
+				url="bReply.jsp";
+				break;
+			case "/doBReply.do": //6. 답글달기저장 - insertt
+				service = new DoBReplyService();
+				service.execute(request, response);
+				//확인용
+				System.out.println(" bno : " + request.getParameter("bno"));
+				System.out.println("컨트롤러 : bReply.jsp호출"); //확인
+				url="doBReply.jsp";
 				break;
 		}//switch(if문대신)
 		

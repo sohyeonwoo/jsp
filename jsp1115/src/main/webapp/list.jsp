@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -38,14 +39,15 @@
        				</tr>
        				<c:forEach items="${list}" var="bdto">
 					<tr>
-					<td>${bdto.bno}</td>
-					<td>${bdto.btitle}</td>
-					<td>${bdto.id}</td>
-					<td>${bdto.bdate}</td>
+					<td>${bdto.bno }</td>
+					<td>${bdto.btitle }</td>
+					<td>${bdto.id }</td>
+					<td>
+					<fmt:formatDate value="${bdto.bdate }" pattern="yyyy-MM-dd" />
+					</td>
 					<td>${bdto.bhit}</td>
 					</tr>
 					</c:forEach>
-					
 				</table>
 				<a href="write.do"><button type="button">Writing</button></a>
 				<a href="index.do"><button type="button">back stage</button></a>

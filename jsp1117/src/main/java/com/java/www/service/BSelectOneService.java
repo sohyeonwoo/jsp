@@ -13,7 +13,11 @@ public class BSelectOneService implements Service {
 		//dao 접근
 		int bno = Integer.parseInt(request.getParameter("bno"));
 		BoardDao bdao = new BoardDao();
+		//조회수 1증가 
+		bdao.bHitUp(bno);
+		//1개의 게시글 가져오기
 		BoardDto bdto = bdao.selectOne(bno);
+		
 		
 		//request 추가
 		request.setAttribute("bdto", bdto);
